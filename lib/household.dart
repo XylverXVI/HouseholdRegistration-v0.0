@@ -27,49 +27,32 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     "Household Serial Number",
                     style: styleText,
                   ),
+                  filler(0, 10),
                   Expanded(
-                    
-                    child: SizedBox(
-                      width: 200,
-                      height: 50,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-
-                        ),
-                      ),
-                    ),
+                    child: TextField(),
                   ),
                 ],
               ),
+              filler(10,0),
               Row(
                 children: <Widget>[
                   Text(
                     "Region",
                     style: styleText,
-                  ),
+                  ),filler(0, 10),
                   Expanded(
-                    child: SizedBox(
-                      width: 200,
-                      child: TextField(),
-                    ),
+                    child: TextField(),
                   ),
-                ],
-              ),
-              Row(
-                children: <Widget>[
                   Text(
                     "Province",
                     style: styleText,
                   ),
                   Expanded(
-                    child: SizedBox(
-                      width: 200,
-                      child: TextField(),
-                    ),
+                    child: TextField(),
                   ),
                 ],
               ),
+              filler(10,0),
               Row(
                 children: <Widget>[
                   Text(
@@ -77,24 +60,14 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     style: styleText,
                   ),
                   Expanded(
-                    child: SizedBox(
-                      width: 200,
-                      child: TextField(),
-                    ),
+                    child: TextField(),
                   ),
-                ],
-              ),
-              Row(
-                children: <Widget>[
                   Text(
                     "Barangay",
                     style: styleText,
                   ),
                   Expanded(
-                    child: SizedBox(
-                      width: 200,
-                      child: TextField(),
-                    ),
+                    child: TextField(),
                   ),
                 ],
               ),
