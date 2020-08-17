@@ -15,10 +15,10 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
       appBar: AppBar(
         title: Text("Household Registration"),
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          width: double.infinity,
           child: Column(
             children: <Widget>[
               Row(
@@ -33,14 +33,15 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                   ),
                 ],
               ),
-              filler(10,0),
+              filler(10, 0),
               Row(
                 children: <Widget>[
                   Text(
                     "Region",
                     style: styleText,
-                  ),filler(0, 10),
+                  ),
                   Expanded(
+                    flex: 2,
                     child: TextField(),
                   ),
                   Text(
@@ -48,11 +49,12 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     style: styleText,
                   ),
                   Expanded(
+                    flex: 2,
                     child: TextField(),
                   ),
                 ],
               ),
-              filler(10,0),
+              filler(10, 0),
               Row(
                 children: <Widget>[
                   Text(
@@ -60,6 +62,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     style: styleText,
                   ),
                   Expanded(
+                    flex: 2,
                     child: TextField(),
                   ),
                   Text(
@@ -67,9 +70,27 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     style: styleText,
                   ),
                   Expanded(
+                    flex: 2,
                     child: TextField(),
                   ),
                 ],
+              ),
+              filler(30, 0),
+              Center(
+                child: RaisedButton(
+                  onPressed: (){},
+                  textColor: Colors.black,
+                  color: Colors.lightBlueAccent,
+                  child: Text("Submit"),
+                  /*child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlueAccent
+                    ),
+                  ),
+                  */
+                ),
               ),
             ],
           ),
@@ -82,7 +103,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
 TextStyle styleText = GoogleFonts.openSans(
   color: Colors.black,
   fontWeight: FontWeight.bold,
-  fontSize: 15,
+  fontSize: 20,
 );
 
 filler(double h, double w) {
