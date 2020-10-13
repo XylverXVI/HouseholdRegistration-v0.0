@@ -3,31 +3,31 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'file_utils.dart';
 
-class HHRegistrationForm extends StatefulWidget {
+class PersonRegistrationForm extends StatefulWidget {
   @override
-  _HHRegistrationFormState createState() => _HHRegistrationFormState();
+  _PersonRegistrationFormState createState() => _PersonRegistrationFormState();
 }
 
-class _HHRegistrationFormState extends State<HHRegistrationForm> {
+class _PersonRegistrationFormState extends State<PersonRegistrationForm> {
   String fileContents = "No Data";
   final myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Household Registration"),
+        title: Text("Person Registration"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Container(
-            width: 450,
+            width: 500,
             child: Column(
               children: <Widget>[
                 Row(
                   children: <Widget>[
                     Text(
-                      "Household Serial Number",
+                      "Person Serial Number",
                       style: styleText,
                     ),
                     filler(0, 5),
@@ -41,7 +41,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                 Row(
                   children: <Widget>[
                     Text(
-                      "Region",
+                      "First Name",
                       style: styleText,
                     ),
                     filler(0, 5),
@@ -54,7 +54,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                 Row(
                   children: <Widget>[
                     Text(
-                      "Province",
+                      "Middle Name",
                       style: styleText,
                     ),
                     filler(0, 5),
@@ -67,7 +67,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                 Row(
                   children: <Widget>[
                     Text(
-                      "City/Municipality",
+                      "Last Name",
                       style: styleText,
                     ),
                     filler(0, 5),
@@ -81,7 +81,7 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                 Row(
                   children: <Widget>[
                     Text(
-                      "Barangay",
+                      "Ext. Name(ex: Jr., Sr.)",
                       style: styleText,
                     ),
                     filler(0, 5),
@@ -91,7 +91,35 @@ class _HHRegistrationFormState extends State<HHRegistrationForm> {
                     ),
                   ],
                 ),
-                filler(30, 0),
+                filler(10, 0),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Birthday",
+                      style: styleText,
+                    ),
+                    filler(0, 5),
+                    Expanded(
+                      flex: 2,
+                      child: TextField(),
+                    ),
+                  ],
+                ),
+                filler(10, 0),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Gender",
+                      style: styleText,
+                    ),
+                    filler(0, 5),
+                    Expanded(
+                      flex: 2,
+                      child: TextField(),
+                    ),
+                  ],
+                ),
+                filler(40, 0),
                 Center(
                   child: RaisedButton(
                     onPressed: (){

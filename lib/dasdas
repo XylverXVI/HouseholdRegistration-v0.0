@@ -1,0 +1,75 @@
+child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Text(
+                    "Household Serial Number",
+                    style: styleText,
+                  ),
+                  filler(0, 10),
+                  Expanded(
+                    child: TextField(),
+                  ),
+                ],
+              ),
+              filler(10, 0),
+              Row(
+                children: <Widget>[
+                  Text(
+                    "Region",
+                    style: styleText,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: TextField(),
+                  ),
+                  Text(
+                    "Province",
+                    style: styleText,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: TextField(),
+                  ),
+                ],
+              ),
+              filler(10, 0),
+              Row(
+                children: <Widget>[
+                  Text(
+                    "City/Municipality",
+                    style: styleText,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: TextField(),
+                  ),
+                  Text(
+                    "Barangay",
+                    style: styleText,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: TextField(),
+                  ),
+                ],
+              ),
+              filler(30, 0),
+              Center(
+                child: RaisedButton(
+                  onPressed: (){},
+                  textColor: Colors.black,
+                  color: Colors.lightBlueAccent,
+                  child: Text("Submit"),
+                  /*child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlueAccent
+                    ),
+                  ),
+                  */
+                ),
+              ),
+            ],
+          ),
