@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:hhregistration/person.dart';
 import 'household.dart';
@@ -13,17 +12,49 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        drawer: MyDrawer(),
-        body: Center(
-          child: Container(
-            child: Text("HOME SCREEN"),
+      home: myHome(),
+    );
+  }
+}
+
+class myHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: MyDrawer(),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Center(
+              child: RaisedButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HHRegistrationForm()),
+                  );
+                },
+                child: Text("Household Register"),
+              ),
+            ),
           ),
-        ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Center(
+              child: RaisedButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => PersonRegistrationForm()),
+                  );
+                },
+                child: Text("Person Register"),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -78,7 +109,7 @@ class MyDrawer extends StatelessWidget {
                     ),);
                   },
                   child: ListTile(
-                    leading: Icon(Icons.list),
+                    //leading: Icon(Icons.list),
                     title: Text("Household Registration"),
                     trailing: Icon(Icons.navigate_next),
                   ),
@@ -92,7 +123,7 @@ class MyDrawer extends StatelessWidget {
                     ),);
                   },
                   child: ListTile(
-                    leading: Icon(Icons.calendar_today),
+                    //leading: Icon(Icons.calendar_today),
                     title: Text("Person Registration"),
                     trailing: Icon(Icons.navigate_next),
                   ),
